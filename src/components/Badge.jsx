@@ -13,12 +13,8 @@ useTexture.preload('./band.jpg')
 const Badge = () => {
     //const { debug } = useControls({ debug: false })
   return (
-    <Canvas 
-    style={{
-      width: '100vw',
-      height: '100vh',
-      display: 'block',
-    }}
+    <div className='w-full md:h-full h-[500px]'>
+       <Canvas 
     camera={{ position: [0, 0, 13], fov: 25 }}>
       <ambientLight intensity={Math.PI} />
       <Physics interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
@@ -32,6 +28,7 @@ const Badge = () => {
         <Lightformer intensity={10} color="white" position={[-10, 0, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[100, 10, 1]} />
       </Environment>
     </Canvas>
+    </div>
   )
 }
 
